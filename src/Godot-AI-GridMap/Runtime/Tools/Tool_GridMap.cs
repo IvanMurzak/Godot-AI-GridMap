@@ -12,26 +12,32 @@ using com.IvanMurzak.McpPlugin;
 namespace com.IvanMurzak.Godot.MCP.GridMap
 {
     /// <summary>
-    /// Sample MCP tool family for the GridMap Tools extension (tool ids prefixed
-    /// <c>gridmap-*</c>). A tool family is one <c>[AiToolType]</c> <c>partial class</c>;
-    /// each tool method (<c>[AiTool("&lt;name&gt;")]</c> + <c>[Description]</c>) lives in its own
-    /// partial-class file. This is the SAME authoring model as Unity-MCP and the core Godot-MCP addon —
-    /// ReflectorNet reflects the attributes, McpPlugin's assembly scanner auto-discovers the family
-    /// once the package's source compiles into the consumer's Godot project (no registry edit needed).
+    /// MCP tool family for the <b>GridMap Tools</b> extension (tool ids prefixed <c>gridmap-*</c>) —
+    /// a source-only NuGet extension for Godot's built-in <c>GridMap</c> node (a 3D grid of cells, each
+    /// holding a mesh from an assigned <c>MeshLibrary</c>). This is the SAME authoring model as Unity-MCP
+    /// and the core Godot-MCP addon: ReflectorNet reflects the attributes, and McpPlugin's assembly scanner
+    /// auto-discovers the family once the package's source compiles into the consumer's Godot project —
+    /// <b>no registry edit needed</b>.
     ///
     /// <para>
-    /// <b>Pure-managed vs editor-only.</b> Split tools by what API they touch, exactly like the core addon:
+    /// <b>Namespace-shadow note.</b> This extension's root namespace ends in <c>.GridMap</c>, which SHADOWS
+    /// the engine type <c>Godot.GridMap</c>. Every editor file that names the engine type aliases it
+    /// (<c>using GdGridMap = Godot.GridMap;</c>) so an unqualified <c>GridMap</c> can never bind to the
+    /// namespace (a <c>CS0118</c> at package-build time).
+    /// </para>
+    ///
+    /// <para>
+    /// <b>Pure-managed vs editor-only.</b> Tools are split by the API they touch, exactly like the core addon:
     /// <list type="bullet">
     ///   <item>
-    ///     Tools with NO Godot native API surface (this file's <c>Echo</c>) stay OUTSIDE <c>#if TOOLS</c>
-    ///     so they compile in any consumer build AND are CI-unit-testable (no Godot binary required —
-    ///     a plain xUnit host can construct the class and call the method).
+    ///     Tools with NO Godot native API (<c>gridmap-defaults</c>, in <c>Runtime/Tools/</c>) stay OUTSIDE
+    ///     <c>#if TOOLS</c> so they compile in any consumer build AND are CI-unit-testable with no Godot binary.
     ///   </item>
     ///   <item>
-    ///     Tools that touch the Godot editor (<c>EditorInterface</c>, live <c>Node</c>/<c>Resource</c>)
-    ///     live behind <c>#if TOOLS</c> (see <c>../../Editor/Tools/Tool_GridMap.EditorInfo.cs</c>),
-    ///     so they are excluded from an exported game build, and they marshal onto the editor main thread
-    ///     via <c>MainThread.Instance.Run(...)</c> — NEVER touch Godot objects off-thread.
+    ///     Tools that drive the editor / live scene (<c>gridmap-create</c>, <c>-set-mesh-library</c>,
+    ///     <c>-set-cell</c>, <c>-clear-cell</c>, <c>-clear</c>, <c>-get</c>, in <c>Editor/Tools/</c>) live behind
+    ///     <c>#if TOOLS</c> (excluded from an exported game) and marshal every Godot call onto the editor main
+    ///     thread via <c>MainThread.Instance.Run(...)</c> — verified by the headless-Godot E2E.
     ///   </item>
     /// </list>
     /// </para>
