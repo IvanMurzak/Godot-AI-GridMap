@@ -1,0 +1,33 @@
+tests/Godot-AI-GridMap.Tests/GridMapCellInfoTests.cs
+  s_e3cea916442b5e::t_a22fdd77469463 1-48
+tests/Godot-AI-GridMap.Tests/Tool_GridMap_DefaultsTests.cs
+  s_e3cea916442b5e::t_ece0e61979ced1 1-64
+tests/Godot-AI-GridMap.Tests/GridMapDefaultsTests.cs
+  s_e3cea916442b5e::t_bf48ec262da350 1-72
+tests/Godot-AI-GridMap.Tests/Godot-AI-GridMap.Tests.csproj
+  s_5343f77e2622eb::t_eaf25d178ef232 39-43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "f18c6e8f0166dc3982dedfe88d56b2637e0e2cb9",
+  "prompts": {},
+  "sessions": {
+    "s_5343f77e2622eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a9c285021ad609297",
+        "model": "unknown"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    },
+    "s_e3cea916442b5e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c575ab56-73e6-4952-bb8b-fef415924e27",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
