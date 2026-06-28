@@ -36,7 +36,11 @@
   -->
   <ItemGroup>
     <Compile Include="..\..\src\Godot-AI-GridMap\Runtime\Tools\Tool_GridMap.cs" Link="Source\Tool_GridMap.cs" />
-    <Compile Include="..\..\src\Godot-AI-GridMap\Runtime\Tools\Tool_GridMap.Echo.cs" Link="Source\Tool_GridMap.Echo.cs" />
+    <Compile Include="..\..\src\Godot-AI-GridMap\Runtime\Tools\Tool_GridMap.Ids.cs" Link="Source\Tool_GridMap.Ids.cs" />
+    <Compile Include="..\..\src\Godot-AI-GridMap\Runtime\Tools\Tool_GridMap.Defaults.cs" Link="Source\Tool_GridMap.Defaults.cs" />
+    <Compile Include="..\..\src\Godot-AI-GridMap\Runtime\GridMap\GridMapNodeInfo.cs" Link="Source\GridMapNodeInfo.cs" />
+    <Compile Include="..\..\src\Godot-AI-GridMap\Runtime\GridMap\GridMapCellInfo.cs" Link="Source\GridMapCellInfo.cs" />
+    <Compile Include="..\..\src\Godot-AI-GridMap\Runtime\GridMap\GridMapDefaults.cs" Link="Source\GridMapDefaults.cs" />
   </ItemGroup>
 
 </Project>
