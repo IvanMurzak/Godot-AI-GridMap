@@ -1,0 +1,29 @@
+src/Godot-AI-GridMap/Runtime/GridMap/GridMapNodeInfo.cs
+  s_e3cea916442b5e::t_d7d207f2f69542 1-69
+src/Godot-AI-GridMap/Runtime/Tools/Tool_GridMap.Ids.cs
+  s_e3cea916442b5e::t_68637f801c41b4 1-40
+src/Godot-AI-GridMap/Runtime/GridMap/GridMapDefaults.cs
+  s_e3cea916442b5e::t_cea85836385b3f 1-89
+src/Godot-AI-GridMap/Runtime/Tools/Tool_GridMap.cs
+  s_e3cea916442b5e::t_f4b3c26fa992c3 15-20,23-30,33-34,37-40
+src/Godot-AI-GridMap/Runtime/Tools/Tool_GridMap.Defaults.cs
+  s_e3cea916442b5e::t_0291ede9bcd1c9 1-53
+src/Godot-AI-GridMap/Runtime/GridMap/GridMapCellInfo.cs
+  s_e3cea916442b5e::t_c0a5ee50dfd9a7 1-58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "d75092420b245fdb0eeb0f2a06e8000bc438cfce",
+  "prompts": {},
+  "sessions": {
+    "s_e3cea916442b5e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c575ab56-73e6-4952-bb8b-fef415924e27",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
