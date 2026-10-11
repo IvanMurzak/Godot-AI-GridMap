@@ -60,7 +60,7 @@ addon, and calls each tool via `godot-cli run-tool`.
 
 - `docs/source-only-nuget-recipe.md` — the packaging recipe (the centerpiece).
 - `docs/ci.md` — workflows, the version gate, the multi-Godot matrix, required secrets.
-- `CLAUDE.md` — maintainer notes.
+- `AGENTS.md` — agent / maintainer notes.
 
 ## Publish
 
