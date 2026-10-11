@@ -30,10 +30,9 @@ the load-bearing detail — read `docs/source-only-nuget-recipe.md`.
 
 ## Tools
 
-Ids live in `Runtime/Tools/Tool_GridMap.Ids.cs` (the source of truth). Each tool is one partial-class file
-named after it: pure-managed under `Runtime/Tools/`, editor tools under `Editor/Tools/`. Current tools:
-`gridmap-defaults` (pure-managed), `gridmap-create`, `gridmap-set-mesh-library`, `gridmap-set-cell`,
-`gridmap-clear-cell`, `gridmap-clear`, `gridmap-get`.
+Ids live in `Runtime/Tools/Tool_GridMap.Ids.cs` (the source of truth). Current tools: `gridmap-defaults`
+(pure-managed), `gridmap-create`, `gridmap-set-mesh-library`, `gridmap-set-cell`, `gridmap-clear-cell`,
+`gridmap-clear`, `gridmap-get`.
 
 ## Build / test (no Godot binary)
 
